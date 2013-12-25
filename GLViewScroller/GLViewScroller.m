@@ -28,6 +28,7 @@
     if(!self.scrollView.delegate){
         // If scrollView doesn't have a delegate, set it to self
         self.scrollView.delegate = self;
+        self.scrollView.pagingEnabled = YES;
     }
     
     self.viewControllerCache = [NSMutableDictionary dictionary];
@@ -93,10 +94,14 @@
         if(viewController.view.frame.origin.x == scrollView.contentOffset.x){
             // Visible
             self.visibleViewControllerIdentifier = [viewController identifier];
-            [viewController didBecomeVisible];
+            if([viewController respondsToSelector: @selector(didBecomeVisible)]){
+                [viewController didBecomeVisible];
+            }
         } else {
             // Invisible
-            [viewController didBecomeInvisible];
+            if([viewController respondsToSelector: @selector(didBecomeInvisible)]){
+                [viewController didBecomeInvisible];
+            }
         }
     }
 }

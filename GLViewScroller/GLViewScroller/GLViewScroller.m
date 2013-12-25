@@ -63,8 +63,25 @@
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
 }
 
+#pragma mark - View Handling
+
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)visibleViewController{
     return self.viewControllerCache[self.visibleViewControllerIdentifier];
+}
+
+- (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
+    UIViewController<GLViewScrollerUIViewControllerDelegate>* viewController = [self.dataSource glViewScroller: self viewControllerAtIndex: index];
+    [self scrollToViewController: viewController withOptions: options];
+}
+
+- (void)scrollToViewControllerWithIdentifier:(NSString *)identifier withOptions:(NSDictionary *)options{
+    [self scrollToViewController: self.viewControllerCache[identifier] withOptions: options];
+}
+
+- (void)scrollToViewController:(UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewController withOptions:(NSDictionary *)options{
+    [viewController updateWithOptions: options];
+    CGRect frame = viewController.view.frame;
+    [self.scrollView scrollRectToVisible: frame animated: YES];
 }
 
 #pragma mark - UIScrollViewDelegate

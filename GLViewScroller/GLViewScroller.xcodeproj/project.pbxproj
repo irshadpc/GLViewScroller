@@ -15,23 +15,8 @@
 		98F94D75186AE04A00E96739 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F94D74186AE04A00E96739 /* main.m */; };
 		98F94D79186AE04A00E96739 /* GLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F94D78186AE04A00E96739 /* GLAppDelegate.m */; };
 		98F94D7B186AE04A00E96739 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F94D7A186AE04A00E96739 /* Images.xcassets */; };
-		98F94D82186AE04B00E96739 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F94D81186AE04B00E96739 /* XCTest.framework */; };
-		98F94D83186AE04B00E96739 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F94D68186AE04A00E96739 /* Foundation.framework */; };
-		98F94D84186AE04B00E96739 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F94D6C186AE04A00E96739 /* UIKit.framework */; };
-		98F94D8C186AE04B00E96739 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98F94D8A186AE04B00E96739 /* InfoPlist.strings */; };
-		98F94D8E186AE04B00E96739 /* GLViewScrollerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F94D8D186AE04B00E96739 /* GLViewScrollerTests.m */; };
 		98F94D99186AE0CF00E96739 /* GLViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F94D98186AE0CF00E96739 /* GLViewScroller.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		98F94D85186AE04B00E96739 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98F94D5D186AE04A00E96739 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98F94D64186AE04A00E96739;
-			remoteInfo = GLViewScroller;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		982683D3186AE50900CF4F08 /* GLScrollDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLScrollDirection.h; sourceTree = "<group>"; };
@@ -49,11 +34,7 @@
 		98F94D77186AE04A00E96739 /* GLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLAppDelegate.h; sourceTree = "<group>"; };
 		98F94D78186AE04A00E96739 /* GLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLAppDelegate.m; sourceTree = "<group>"; };
 		98F94D7A186AE04A00E96739 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		98F94D80186AE04B00E96739 /* GLViewScrollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLViewScrollerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F94D81186AE04B00E96739 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		98F94D89186AE04B00E96739 /* GLViewScrollerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GLViewScrollerTests-Info.plist"; sourceTree = "<group>"; };
-		98F94D8B186AE04B00E96739 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		98F94D8D186AE04B00E96739 /* GLViewScrollerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLViewScrollerTests.m; sourceTree = "<group>"; };
 		98F94D97186AE0CF00E96739 /* GLViewScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLViewScroller.h; sourceTree = "<group>"; };
 		98F94D98186AE0CF00E96739 /* GLViewScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLViewScroller.m; sourceTree = "<group>"; };
 		98F94D9A186AE28000E96739 /* GLViewScrollerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLViewScrollerDataSource.h; sourceTree = "<group>"; };
@@ -70,16 +51,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98F94D7D186AE04B00E96739 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98F94D82186AE04B00E96739 /* XCTest.framework in Frameworks */,
-				98F94D84186AE04B00E96739 /* UIKit.framework in Frameworks */,
-				98F94D83186AE04B00E96739 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -87,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				98F94D6E186AE04A00E96739 /* GLViewScroller */,
-				98F94D87186AE04B00E96739 /* GLViewScrollerTests */,
 				98F94D67186AE04A00E96739 /* Frameworks */,
 				98F94D66186AE04A00E96739 /* Products */,
 			);
@@ -97,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				98F94D65186AE04A00E96739 /* GLViewScroller.app */,
-				98F94D80186AE04B00E96739 /* GLViewScrollerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,24 +111,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		98F94D87186AE04B00E96739 /* GLViewScrollerTests */ = {
-			isa = PBXGroup;
-			children = (
-				98F94D8D186AE04B00E96739 /* GLViewScrollerTests.m */,
-				98F94D88186AE04B00E96739 /* Supporting Files */,
-			);
-			path = GLViewScrollerTests;
-			sourceTree = "<group>";
-		};
-		98F94D88186AE04B00E96739 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				98F94D89186AE04B00E96739 /* GLViewScrollerTests-Info.plist */,
-				98F94D8A186AE04B00E96739 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,24 +131,6 @@
 			productReference = 98F94D65186AE04A00E96739 /* GLViewScroller.app */;
 			productType = "com.apple.product-type.application";
 		};
-		98F94D7F186AE04B00E96739 /* GLViewScrollerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98F94D94186AE04B00E96739 /* Build configuration list for PBXNativeTarget "GLViewScrollerTests" */;
-			buildPhases = (
-				98F94D7C186AE04B00E96739 /* Sources */,
-				98F94D7D186AE04B00E96739 /* Frameworks */,
-				98F94D7E186AE04B00E96739 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				98F94D86186AE04B00E96739 /* PBXTargetDependency */,
-			);
-			name = GLViewScrollerTests;
-			productName = GLViewScrollerTests;
-			productReference = 98F94D80186AE04B00E96739 /* GLViewScrollerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -207,11 +140,6 @@
 				CLASSPREFIX = GL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Gertjan Leemans";
-				TargetAttributes = {
-					98F94D7F186AE04B00E96739 = {
-						TestTargetID = 98F94D64186AE04A00E96739;
-					};
-				};
 			};
 			buildConfigurationList = 98F94D60186AE04A00E96739 /* Build configuration list for PBXProject "GLViewScroller" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -226,7 +154,6 @@
 			projectRoot = "";
 			targets = (
 				98F94D64186AE04A00E96739 /* GLViewScroller */,
-				98F94D7F186AE04B00E96739 /* GLViewScrollerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,14 +165,6 @@
 			files = (
 				98F94D73186AE04A00E96739 /* InfoPlist.strings in Resources */,
 				98F94D7B186AE04A00E96739 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98F94D7E186AE04B00E96739 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98F94D8C186AE04B00E96739 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,37 +182,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98F94D7C186AE04B00E96739 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				98F94D8E186AE04B00E96739 /* GLViewScrollerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		98F94D86186AE04B00E96739 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98F94D64186AE04A00E96739 /* GLViewScroller */;
-			targetProxy = 98F94D85186AE04B00E96739 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		98F94D71186AE04A00E96739 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				98F94D72186AE04A00E96739 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		98F94D8A186AE04B00E96739 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				98F94D8B186AE04B00E96739 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -399,48 +294,6 @@
 			};
 			name = Release;
 		};
-		98F94D95186AE04B00E96739 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GLViewScroller.app/GLViewScroller";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GLViewScroller/GLViewScroller-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "GLViewScrollerTests/GLViewScrollerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		98F94D96186AE04B00E96739 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GLViewScroller.app/GLViewScroller";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GLViewScroller/GLViewScroller-Prefix.pch";
-				INFOPLIST_FILE = "GLViewScrollerTests/GLViewScrollerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,15 +311,6 @@
 			buildConfigurations = (
 				98F94D92186AE04B00E96739 /* Debug */,
 				98F94D93186AE04B00E96739 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98F94D94186AE04B00E96739 /* Build configuration list for PBXNativeTarget "GLViewScrollerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98F94D95186AE04B00E96739 /* Debug */,
-				98F94D96186AE04B00E96739 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

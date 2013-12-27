@@ -58,6 +58,7 @@
             [viewController setGLViewScroller: self];
             [self.scrollView addSubview: viewController.view];
         }
+#warning should remove old viewControllers;
         
         currentWidth += viewController.view.frame.size.width;
     }
@@ -72,6 +73,12 @@
 }
 
 - (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
+    if(index < 0){
+        index = 0;
+    }
+    if(index >= self.viewControllerCache.count){
+        index = self.viewControllerCache.count - 1;
+    }
     UIViewController<GLViewScrollerUIViewControllerDelegate>* viewController = [self.dataSource glViewScroller: self viewControllerAtIndex: index];
     [self scrollToViewController: viewController withOptions: options];
 }

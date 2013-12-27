@@ -23,6 +23,7 @@
     if(!self.scrollView){
         // If no scrollView set, create one full-screen
         self.scrollView = [[UIScrollView alloc] initWithFrame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [self.view addSubview: self.scrollView];
     }
     
     if(!self.scrollView.delegate){
@@ -50,8 +51,7 @@
             isNewViewController = YES;
         }
         
-        viewController.view.frame = CGRectMake(currentWidth + viewController.view.frame.size.width
-                                               , 0, viewController.view.frame.size.width, viewController.view.frame.size.height);
+        viewController.view.frame = CGRectMake(currentWidth, 0, viewController.view.frame.size.width, viewController.view.frame.size.height);
         
         if(isNewViewController){
             // New viewController, add it to the scrollView

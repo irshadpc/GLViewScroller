@@ -54,7 +54,8 @@
         viewController.view.frame = CGRectMake(currentWidth, 0, viewController.view.frame.size.width, viewController.view.frame.size.height);
         
         if(isNewViewController){
-            // New viewController, add it to the scrollView
+            // New viewController, add it to the scrollView and set parent
+            [viewController setGLViewScroller: self];
             [self.scrollView addSubview: viewController.view];
         }
         

@@ -11,6 +11,7 @@
 #import "GLViewScrollerDataSource.h"
 #import "GLViewScrollerUIViewControllerDelegate.h"
 #import "GLScrollDirection.h"
+#import "UIViewController+GLViewScroller.h"
 
 @interface GLViewScroller : UIViewController <UIScrollViewDelegate>
 

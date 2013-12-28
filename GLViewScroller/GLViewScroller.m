@@ -120,7 +120,7 @@
     if(!self.viewControllerCache){
         self.scrollToWhenUpdated = @{
                                      @"identifier": [viewController identifier],
-                                     @"options": options,
+                                     @"options": options == nil ? @{} : options,
                                      @"animated": [NSNumber numberWithBool: animated]
                                      };
     } else {

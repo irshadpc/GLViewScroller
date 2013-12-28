@@ -16,6 +16,7 @@
 @interface GLViewScroller : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView* scrollView;
+@property (assign, nonatomic) CGFloat margin;
 
 @property (assign, nonatomic) id<GLViewScrollerDataSource> dataSource;
 

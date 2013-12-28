@@ -14,12 +14,12 @@
 		982683F8186D69C200CF4F08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 982683F7186D69C200CF4F08 /* main.m */; };
 		982683FC186D69C200CF4F08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 982683FB186D69C200CF4F08 /* AppDelegate.m */; };
 		982683FE186D69C200CF4F08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 982683FD186D69C200CF4F08 /* Images.xcassets */; };
-		98268422186D6A0F00CF4F08 /* GLViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826841D186D6A0F00CF4F08 /* GLViewScroller.m */; };
-		98268423186D6A0F00CF4F08 /* UIViewController+GLViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98268421186D6A0F00CF4F08 /* UIViewController+GLViewScroller.m */; };
 		98268427186D6C5E00CF4F08 /* PlainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98268425186D6C5E00CF4F08 /* PlainViewController.m */; };
 		98268428186D6C5E00CF4F08 /* PlainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98268426186D6C5E00CF4F08 /* PlainViewController.xib */; };
 		9826842D186D711E00CF4F08 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826842B186D711E00CF4F08 /* TableViewController.m */; };
 		9826842E186D711E00CF4F08 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826842C186D711E00CF4F08 /* TableViewController.xib */; };
+		98268454186F056B00CF4F08 /* GLViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826844F186F056B00CF4F08 /* GLViewScroller.m */; };
+		98268455186F056B00CF4F08 /* UIViewController+GLViewScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 98268453186F056B00CF4F08 /* UIViewController+GLViewScroller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,19 +35,19 @@
 		982683FB186D69C200CF4F08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		982683FD186D69C200CF4F08 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		98268404186D69C200CF4F08 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		9826841B186D6A0F00CF4F08 /* GLScrollDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLScrollDirection.h; path = ../GLScrollDirection.h; sourceTree = "<group>"; };
-		9826841C186D6A0F00CF4F08 /* GLViewScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScroller.h; path = ../GLViewScroller.h; sourceTree = "<group>"; };
-		9826841D186D6A0F00CF4F08 /* GLViewScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLViewScroller.m; path = ../GLViewScroller.m; sourceTree = "<group>"; };
-		9826841E186D6A0F00CF4F08 /* GLViewScrollerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScrollerDataSource.h; path = ../GLViewScrollerDataSource.h; sourceTree = "<group>"; };
-		9826841F186D6A0F00CF4F08 /* GLViewScrollerUIViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScrollerUIViewControllerDelegate.h; path = ../GLViewScrollerUIViewControllerDelegate.h; sourceTree = "<group>"; };
-		98268420186D6A0F00CF4F08 /* UIViewController+GLViewScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+GLViewScroller.h"; path = "../UIViewController+GLViewScroller.h"; sourceTree = "<group>"; };
-		98268421186D6A0F00CF4F08 /* UIViewController+GLViewScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+GLViewScroller.m"; path = "../UIViewController+GLViewScroller.m"; sourceTree = "<group>"; };
 		98268424186D6C5E00CF4F08 /* PlainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlainViewController.h; path = View/PlainViewController.h; sourceTree = "<group>"; };
 		98268425186D6C5E00CF4F08 /* PlainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlainViewController.m; path = View/PlainViewController.m; sourceTree = "<group>"; };
 		98268426186D6C5E00CF4F08 /* PlainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlainViewController.xib; path = View/PlainViewController.xib; sourceTree = "<group>"; };
 		9826842A186D711E00CF4F08 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		9826842B186D711E00CF4F08 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		9826842C186D711E00CF4F08 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		9826844D186F056B00CF4F08 /* GLScrollDirection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLScrollDirection.h; path = ../../GLScrollDirection.h; sourceTree = "<group>"; };
+		9826844E186F056B00CF4F08 /* GLViewScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScroller.h; path = ../../GLViewScroller.h; sourceTree = "<group>"; };
+		9826844F186F056B00CF4F08 /* GLViewScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLViewScroller.m; path = ../../GLViewScroller.m; sourceTree = "<group>"; };
+		98268450186F056B00CF4F08 /* GLViewScrollerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScrollerDataSource.h; path = ../../GLViewScrollerDataSource.h; sourceTree = "<group>"; };
+		98268451186F056B00CF4F08 /* GLViewScrollerUIViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLViewScrollerUIViewControllerDelegate.h; path = ../../GLViewScrollerUIViewControllerDelegate.h; sourceTree = "<group>"; };
+		98268452186F056B00CF4F08 /* UIViewController+GLViewScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+GLViewScroller.h"; path = "../../UIViewController+GLViewScroller.h"; sourceTree = "<group>"; };
+		98268453186F056B00CF4F08 /* UIViewController+GLViewScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+GLViewScroller.m"; path = "../../UIViewController+GLViewScroller.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 		982683F1186D69C200CF4F08 /* ViewScrollerExample */ = {
 			isa = PBXGroup;
 			children = (
-				9826841A186D6A0F00CF4F08 /* GLViewScroller */,
+				98268456186F057400CF4F08 /* GLViewScroller */,
 				982683FA186D69C200CF4F08 /* AppDelegate.h */,
 				982683FB186D69C200CF4F08 /* AppDelegate.m */,
 				982683FD186D69C200CF4F08 /* Images.xcassets */,
@@ -116,21 +116,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9826841A186D6A0F00CF4F08 /* GLViewScroller */ = {
-			isa = PBXGroup;
-			children = (
-				9826841B186D6A0F00CF4F08 /* GLScrollDirection.h */,
-				9826841C186D6A0F00CF4F08 /* GLViewScroller.h */,
-				9826841D186D6A0F00CF4F08 /* GLViewScroller.m */,
-				9826841E186D6A0F00CF4F08 /* GLViewScrollerDataSource.h */,
-				9826841F186D6A0F00CF4F08 /* GLViewScrollerUIViewControllerDelegate.h */,
-				98268420186D6A0F00CF4F08 /* UIViewController+GLViewScroller.h */,
-				98268421186D6A0F00CF4F08 /* UIViewController+GLViewScroller.m */,
-			);
-			name = GLViewScroller;
-			path = ../../GLViewScroller;
-			sourceTree = "<group>";
-		};
 		98268429186D6C6500CF4F08 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +127,20 @@
 				9826842C186D711E00CF4F08 /* TableViewController.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		98268456186F057400CF4F08 /* GLViewScroller */ = {
+			isa = PBXGroup;
+			children = (
+				9826844D186F056B00CF4F08 /* GLScrollDirection.h */,
+				9826844E186F056B00CF4F08 /* GLViewScroller.h */,
+				9826844F186F056B00CF4F08 /* GLViewScroller.m */,
+				98268450186F056B00CF4F08 /* GLViewScrollerDataSource.h */,
+				98268451186F056B00CF4F08 /* GLViewScrollerUIViewControllerDelegate.h */,
+				98268452186F056B00CF4F08 /* UIViewController+GLViewScroller.h */,
+				98268453186F056B00CF4F08 /* UIViewController+GLViewScroller.m */,
+			);
+			name = GLViewScroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,11 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98268423186D6A0F00CF4F08 /* UIViewController+GLViewScroller.m in Sources */,
 				9826842D186D711E00CF4F08 /* TableViewController.m in Sources */,
 				982683FC186D69C200CF4F08 /* AppDelegate.m in Sources */,
+				98268455186F056B00CF4F08 /* UIViewController+GLViewScroller.m in Sources */,
+				98268454186F056B00CF4F08 /* GLViewScroller.m in Sources */,
 				982683F8186D69C200CF4F08 /* main.m in Sources */,
-				98268422186D6A0F00CF4F08 /* GLViewScroller.m in Sources */,
 				98268427186D6C5E00CF4F08 /* PlainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

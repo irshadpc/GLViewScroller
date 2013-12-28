@@ -22,8 +22,10 @@
 
 - (void) updateViewControllers;
 
-#pragma mark - View Handling
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *) visibleViewController;
+- (UIViewController<GLViewScrollerUIViewControllerDelegate> *) viewControllerWithIdentifier: (NSString*) identifier;
+
+#pragma mark - View Handling
 
 - (void) scrollToViewControllerAtIndex: (NSInteger) index withOptions: (NSDictionary *) options;
 - (void) scrollToViewControllerWithIdentifier: (NSString*) identifier withOptions: (NSDictionary *) options;

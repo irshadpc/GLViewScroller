@@ -70,11 +70,15 @@
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
 }
 
-#pragma mark - View Handling
-
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)visibleViewController{
     return self.viewControllerCache[self.visibleViewControllerIdentifier];
 }
+
+- (UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewControllerWithIdentifier:(NSString *)identifier{
+    return self.viewControllerCache[identifier];
+}
+
+#pragma mark - View Handling
 
 - (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
     [self scrollToViewControllerAtIndex: index withOptions: options animated: YES];

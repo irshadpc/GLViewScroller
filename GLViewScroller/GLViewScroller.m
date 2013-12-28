@@ -105,7 +105,7 @@
     if(index < 0){
         index = 0;
     }
-    if(index >= self.viewControllerCache.count){
+    if(self.viewControllerCache && index >= self.viewControllerCache.count){
         index = self.viewControllerCache.count - 1;
     }
     UIViewController<GLViewScrollerUIViewControllerDelegate>* viewController = [self.dataSource glViewScroller: self viewControllerAtIndex: index];

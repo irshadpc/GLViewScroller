@@ -61,7 +61,7 @@
 #pragma mark - GLViewScrollerUIViewControllerDelegate
 
 - (NSString *)identifier{
-    return self.description;
+    return @"TableViewController";
 }
 
 - (BOOL)canScrollToDirection:(GLScrollDirection)direction{

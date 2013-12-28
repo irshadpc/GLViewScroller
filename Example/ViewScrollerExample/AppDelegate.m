@@ -19,6 +19,7 @@
     self.viewScroller = [[GLViewScroller alloc] init];
     self.viewScroller.dataSource = self;
     self.window.rootViewController = self.viewScroller;
+    [self.viewScroller scrollToViewControllerAtIndex: 1 withOptions: @{} animated: NO];
     
     [self.window makeKeyAndVisible];
     
@@ -55,7 +56,7 @@
 #pragma mark - GLViewScrollerDataSource
 
 - (NSInteger)numberOfViewControllersInGLViewScroller:(GLViewScroller *)glViewScroller{
-    return 3;
+    return 2;
 }
 
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)glViewScroller:(GLViewScroller *)glViewScroller viewControllerAtIndex:(NSInteger)index{

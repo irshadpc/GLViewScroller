@@ -37,7 +37,7 @@
 #pragma mark - GLViewScrollerUIViewControllerDelegate
 
 - (NSString *)identifier{
-    return self.description;
+    return @"PlainViewController";
 }
 
 - (BOOL)canScrollToDirection:(GLScrollDirection)direction{
@@ -46,10 +46,6 @@
 
 - (void)updateWithOptions:(NSDictionary *)options{
     
-}
-
-- (void)didBecomeVisible{
-    NSLog(@"Did become visible: %@", [self identifier]);
 }
 
 @end

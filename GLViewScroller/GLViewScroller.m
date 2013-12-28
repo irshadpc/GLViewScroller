@@ -35,6 +35,9 @@
     self.viewControllerCache = [NSMutableDictionary dictionary];
     
     [self updateViewControllers];
+    
+    // Set visibleViewControllerIdentifier to the first viewController
+    self.visibleViewControllerIdentifier = [[self.dataSource glViewScroller: self viewControllerAtIndex:0] identifier];
 }
 
 - (void) updateViewControllers{
@@ -60,17 +63,21 @@
         }
 #warning should remove old viewControllers;
         
-        currentWidth += viewController.view.frame.size.width;
+        currentWidth += viewController.view.frame.size.width + self.margin;
     }
     
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
 }
 
-#pragma mark - View Handling
-
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)visibleViewController{
     return self.viewControllerCache[self.visibleViewControllerIdentifier];
 }
+
+- (UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewControllerWithIdentifier:(NSString *)identifier{
+    return self.viewControllerCache[identifier];
+}
+
+#pragma mark - View Handling
 
 - (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
     if(index < 0){
@@ -91,6 +98,19 @@
     [viewController updateWithOptions: options];
     CGRect frame = viewController.view.frame;
     [self.scrollView scrollRectToVisible: frame animated: YES];
+    
+    // Call visible/invisible on viewControllers
+    for (NSString* key in self.viewControllerCache) {
+        UIViewController<GLViewScrollerUIViewControllerDelegate>* viewControllerFromCache = self.viewControllerCache[key];
+        
+        if(viewController == viewControllerFromCache){
+            // Visible
+            [viewController didBecomeVisible];
+        } else {
+            // Invisible
+            [viewController didBecomeInvisible];
+        }
+    }
 }
 
 #pragma mark - UIScrollViewDelegate

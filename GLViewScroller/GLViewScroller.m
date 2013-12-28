@@ -64,7 +64,7 @@
             [self.scrollView addSubview: viewController.view];
         }
         
-        currentWidth += viewController.view.frame.size.width;
+        currentWidth += viewController.view.frame.size.width + self.margin;
         newViewControllerCache[[viewController identifier]] = viewController;
     }
     

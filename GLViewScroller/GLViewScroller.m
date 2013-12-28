@@ -35,9 +35,6 @@
     self.viewControllerCache = [NSMutableDictionary dictionary];
     
     [self updateViewControllers];
-    
-    // Set visibleViewControllerIdentifier to the first viewController
-    self.visibleViewControllerIdentifier = [[self.dataSource glViewScroller: self viewControllerAtIndex:0] identifier];
 }
 
 - (void) updateViewControllers{
@@ -73,17 +70,25 @@
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
 }
 
+#pragma mark - View Handling
+
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)visibleViewController{
     return self.viewControllerCache[self.visibleViewControllerIdentifier];
 }
 
-- (UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewControllerWithIdentifier:(NSString *)identifier{
-    return self.viewControllerCache[identifier];
+- (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
+    [self scrollToViewControllerAtIndex: index withOptions: options animated: YES];
 }
 
-#pragma mark - View Handling
+- (void)scrollToViewControllerWithIdentifier:(NSString *)identifier withOptions:(NSDictionary *)options{
+    [self scrollToViewControllerWithIdentifier: identifier withOptions: options animated: YES];
+}
 
-- (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options{
+- (void)scrollToViewController:(UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewController withOptions:(NSDictionary *)options{
+    [self scrollToViewController: viewController withOptions: options animated: YES];
+}
+
+- (void)scrollToViewControllerAtIndex:(NSInteger)index withOptions:(NSDictionary *)options animated:(BOOL)animated{
     if(index < 0){
         index = 0;
     }
@@ -94,14 +99,14 @@
     [self scrollToViewController: viewController withOptions: options];
 }
 
-- (void)scrollToViewControllerWithIdentifier:(NSString *)identifier withOptions:(NSDictionary *)options{
+- (void)scrollToViewControllerWithIdentifier:(NSString *)identifier withOptions:(NSDictionary *)options animated:(BOOL)animated{
     [self scrollToViewController: self.viewControllerCache[identifier] withOptions: options];
 }
 
-- (void)scrollToViewController:(UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewController withOptions:(NSDictionary *)options{
+- (void)scrollToViewController:(UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewController withOptions:(NSDictionary *)options animated:(BOOL)animated{
     [viewController updateWithOptions: options];
     CGRect frame = viewController.view.frame;
-    [self.scrollView scrollRectToVisible: frame animated: YES];
+    [self.scrollView scrollRectToVisible: frame animated: animated];
     
     // Call visible/invisible on viewControllers
     for (NSString* key in self.viewControllerCache) {

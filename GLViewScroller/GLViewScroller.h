@@ -31,4 +31,8 @@
 - (void) scrollToViewControllerWithIdentifier: (NSString*) identifier withOptions: (NSDictionary *) options;
 - (void) scrollToViewController: (UIViewController<GLViewScrollerUIViewControllerDelegate> *) viewController withOptions: (NSDictionary *) options;
 
+- (void) scrollToViewControllerAtIndex: (NSInteger) index withOptions: (NSDictionary *) options animated: (BOOL) animated;
+- (void) scrollToViewControllerWithIdentifier: (NSString*) identifier withOptions: (NSDictionary *) options animated: (BOOL) animated;
+- (void) scrollToViewController: (UIViewController<GLViewScrollerUIViewControllerDelegate> *) viewController withOptions: (NSDictionary *) options animated: (BOOL) animated;
+
 @end

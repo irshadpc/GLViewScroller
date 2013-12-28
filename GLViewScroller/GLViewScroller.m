@@ -43,6 +43,8 @@
 - (void) updateViewControllers{
     CGFloat currentWidth = 0;
     
+    NSMutableDictionary* newViewControllerCache = [NSMutableDictionary dictionary];
+    
     for(int i = 0; i < [self.dataSource numberOfViewControllersInGLViewScroller: self]; i++){
         UIViewController<GLViewScrollerUIViewControllerDelegate>* viewController = [self.dataSource glViewScroller: self viewControllerAtIndex: i];
         
@@ -61,10 +63,12 @@
             [viewController setGLViewScroller: self];
             [self.scrollView addSubview: viewController.view];
         }
-#warning should remove old viewControllers;
         
-        currentWidth += viewController.view.frame.size.width + self.margin;
+        currentWidth += viewController.view.frame.size.width;
+        newViewControllerCache[[viewController identifier]] = viewController;
     }
+    
+    self.viewControllerCache = newViewControllerCache;
     
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
 }

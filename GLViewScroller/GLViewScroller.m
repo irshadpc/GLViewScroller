@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary* viewControllerCache;
 @property (strong, nonatomic) NSString* visibleViewControllerIdentifier;
+@property (strong, nonatomic) NSDictionary* scrollToWhenUpdated;
 
 @end
 
@@ -68,6 +69,14 @@
     self.viewControllerCache = newViewControllerCache;
     
     self.scrollView.contentSize = CGSizeMake(currentWidth, self.scrollView.frame.size.height);
+    
+    if(self.scrollToWhenUpdated){
+        [self scrollToViewControllerWithIdentifier: self.scrollToWhenUpdated[@"identifier"]
+                                       withOptions: self.scrollToWhenUpdated[@"options"]
+                                          animated: [self.scrollToWhenUpdated[@"animated"] boolValue]];
+        
+        self.scrollToWhenUpdated = nil;
+    }
 }
 
 - (UIViewController<GLViewScrollerUIViewControllerDelegate> *)visibleViewController{
@@ -100,28 +109,42 @@
         index = self.viewControllerCache.count - 1;
     }
     UIViewController<GLViewScrollerUIViewControllerDelegate>* viewController = [self.dataSource glViewScroller: self viewControllerAtIndex: index];
-    [self scrollToViewController: viewController withOptions: options];
+    [self scrollToViewController: viewController withOptions: options animated: animated];
 }
 
 - (void)scrollToViewControllerWithIdentifier:(NSString *)identifier withOptions:(NSDictionary *)options animated:(BOOL)animated{
-    [self scrollToViewController: self.viewControllerCache[identifier] withOptions: options];
+    [self scrollToViewController: self.viewControllerCache[identifier] withOptions: options animated: animated];
 }
 
 - (void)scrollToViewController:(UIViewController<GLViewScrollerUIViewControllerDelegate> *)viewController withOptions:(NSDictionary *)options animated:(BOOL)animated{
-    [viewController updateWithOptions: options];
-    CGRect frame = viewController.view.frame;
-    [self.scrollView scrollRectToVisible: frame animated: animated];
-    
-    // Call visible/invisible on viewControllers
-    for (NSString* key in self.viewControllerCache) {
-        UIViewController<GLViewScrollerUIViewControllerDelegate>* viewControllerFromCache = self.viewControllerCache[key];
+    if(!self.viewControllerCache){
+        self.scrollToWhenUpdated = @{
+                                     @"identifier": [viewController identifier],
+                                     @"options": options,
+                                     @"animated": [NSNumber numberWithBool: animated]
+                                     };
+    } else {
+        self.visibleViewControllerIdentifier = [viewController identifier];
         
-        if(viewController == viewControllerFromCache){
-            // Visible
-            [viewController didBecomeVisible];
-        } else {
-            // Invisible
-            [viewController didBecomeInvisible];
+        [viewController updateWithOptions: options];
+        
+        [self.scrollView setContentOffset: CGPointMake(viewController.view.frame.origin.x, 0) animated: animated];
+        
+        // Call visible/invisible on viewControllers
+        for (NSString* key in self.viewControllerCache) {
+            UIViewController<GLViewScrollerUIViewControllerDelegate>* viewControllerFromCache = self.viewControllerCache[key];
+            
+            if(viewController == viewControllerFromCache){
+                // Visible
+                if([viewController respondsToSelector: @selector(didBecomeVisible)]){
+                    [viewController didBecomeVisible];
+                }
+            } else {
+                // Invisible
+                if([viewController respondsToSelector: @selector(didBecomeInvisible)]){
+                    [viewController didBecomeInvisible];
+                }
+            }
         }
     }
 }
